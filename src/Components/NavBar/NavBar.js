@@ -1,5 +1,5 @@
+import CardWidget from '../CartWidget/CardWidget';
 import './NavBar.css';
-import 'bootstrap/dist/css/bootstrap.css'
 
 function NavBar() {
     return (
@@ -19,6 +19,7 @@ function NavBar() {
         <p className="nav-link" href="#">Contacto</p>
       </div>
     </div>
+    <CardWidget/>
   </div>
 </nav>
           
