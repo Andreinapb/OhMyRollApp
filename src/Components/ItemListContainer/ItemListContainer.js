@@ -4,10 +4,14 @@ import Greeting from './Greeting'
 
 
 const ItemListContainer = () => {
+
+    const OnAdd = (producto) => { if (producto >= 1) {alert (`compraste ${producto} productos`)}}
+    
+
     return (
 <div>
 <Greeting saludo= "Hola mundo, acá irán mis productos!"/>
-<ItemCount/>
+<ItemCount Initial={1} Stock={10} OnAdd={OnAdd}/>
 </div>
     )
 }
