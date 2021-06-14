@@ -1,17 +1,27 @@
-import React from 'react'
+import {useEffect, useState } from "react";
 import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
 import Greeting from './Greeting'
 
+const ItemListContainer = ({productos}) => {
 
-const ItemListContainer = () => {
+    const [items, setItems] = useState([])
+
+useEffect(
+  () => {
+
+    new Promise (  (succes,reject) => {
+        setTimeout( () => {succes (productos)}, 2000); } )
+
+        .then ( (result) => setItems (result) )
+
+}, [] )
 
     const OnAdd = (producto) => { if (producto >= 1) {alert (`compraste ${producto} productos`)}}
-    
 
     return (
 <div>
-<Greeting saludo= "Hola mundo, acá irán mis productos!"/>
-<ItemCount Initial={1} Stock={10} OnAdd={OnAdd}/>
+<ItemList items = {productos}></ItemList>
 </div>
     )
 }
