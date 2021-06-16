@@ -1,28 +1,28 @@
 
 [{
     "id": 0,
-    "imagen":"../img/img14.jpg",
+    "imagen":"./img/img3.jpg" , 
     "nombre": "Bandeja 1",
     "cantidad": 4,
     "precio": 400
   
 }, {
     "id": 1,
-    "imagen":"../img/img15.jpg",
+    "imagen":"./img/img15.jpg",
     "nombre": "Bandeja 2",
     "cantidad": 6,
     "precio": 600
   
 }, {
     "id": 2,
-    "imagen":"../img/img7.jpg",
+    "imagen":"./img/img7.jpg",
     "nombre": "Bandeja 3",
     "cantidad": 8,
     "precio": 800
 
 }, {
     "id": 3,
-    "imagen":"../img/img8.jpg",
+    "imagen":"./img/img8.jpg",
     "nombre": "Bandeja 4",
     "cantidad": 12,
     "precio": 1200

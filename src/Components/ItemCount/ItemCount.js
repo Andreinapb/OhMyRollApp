@@ -1,5 +1,5 @@
 
-import React, {useState}from 'react'
+/* import React, {useState} from 'react'
 import './ItemCount.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'; 
@@ -29,3 +29,4 @@ const Sumar = () => {Contador < Stock ? setContador (Contador + 1) : alert ("Se 
 }
 
 export default ItemCount
+ */
