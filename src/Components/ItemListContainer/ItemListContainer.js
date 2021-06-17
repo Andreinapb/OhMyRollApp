@@ -21,7 +21,7 @@ useEffect(
 
     return (
 <div>
-<ItemList items = {productos}></ItemList>
+<ItemList className="List" items = {productos}></ItemList>
 </div>
     )
 }
