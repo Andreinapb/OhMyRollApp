@@ -1,4 +1,5 @@
 import NavBar from "./Components/NavBar/NavBar";
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,9 +15,28 @@ const productos = Info
 
   return (
     <div>
-     <NavBar/>
-     <ItemListContainer productos= {productos}/>
-     <ItemDetailContainer productos= {productos}/>
+
+<BrowserRouter>
+<NavBar/>
+<Switch>
+<Route exact path='/'> 
+<ItemListContainer productos= {productos}/>
+</Route>
+<Route exact path='/category/:id'> 
+<ItemListContainer productos= {productos}/>
+</Route>
+<Route path ='/item/:id'> 
+<ItemDetailContainer productos= {productos}/>
+</Route>
+</Switch>
+</BrowserRouter>
+
+
+
+
+     
+     
+    
 
     </div>
   );

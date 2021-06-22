@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from '../Item/Item'
 import './ItemList.css'
+import { Link } from 'react-router-dom'
 
 const ItemList = ({items}) => {
 
@@ -10,7 +11,10 @@ const ItemList = ({items}) => {
 
 items.map (
     (item,i) => (
-        <Item key={i} item={item}></Item>
+  <Link to = {`/${item.id}`} >
+  <Item key={item.id} item={item}></Item>
+  </Link>
+        
     )
 )
             }
