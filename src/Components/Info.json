@@ -5,6 +5,7 @@
     "nombre": "Bandeja 1",
     "descripcion": "Deliciosos Rolls de Canela con toppig de crema especial de la casa",
     "cantidad": 4,
+    "categoria": "Grande",
     "precio": 400
   
 }, {
@@ -13,6 +14,7 @@
     "nombre": "Bandeja 2",
     "descripcion": "Deliciosos Rolls de Canela con toppig de crema especial de la casa",
     "cantidad": 6,
+    "categoria": "Grande",
     "precio": 600
   
 }, {
@@ -21,6 +23,7 @@
     "nombre": "Bandeja 3",
     "descripcion": "Deliciosos Rolls de Canela con toppig de crema especial de la casa",
     "cantidad": 8,
+    "categoria": "Familiar",
     "precio": 800
 
 }, {
@@ -29,5 +32,6 @@
     "nombre": "Bandeja 4",
     "descripcion": "Deliciosos Rolls de Canela con toppig de crema especial de la casa",
     "cantidad": 12,
+    "categoria": "Familiar",
     "precio": 1200
 }]

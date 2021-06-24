@@ -1,5 +1,4 @@
-
-/* import React, {useState} from 'react'
+import React, {useState} from 'react'
 import './ItemCount.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'; 
@@ -21,7 +20,7 @@ const Sumar = () => {Contador < Stock ? setContador (Contador + 1) : alert ("Se 
 <FontAwesomeIcon icon={faPlusCircle} className='icon' onClick = { () => Sumar()}></FontAwesomeIcon>
 </div>
 
-<button onClick = { () => OnAdd (Contador) } className='boton' type='button'> Agregar Productos</button>
+<button onClick = { () => OnAdd (Contador) } className='boton' type='button'> { Contador >= 1 ? ('Realizar Compra') : ('Agregar Productos') }</button>
 </div>
        
         </div>
@@ -29,4 +28,4 @@ const Sumar = () => {Contador < Stock ? setContador (Contador + 1) : alert ("Se 
 }
 
 export default ItemCount
- */
+ 

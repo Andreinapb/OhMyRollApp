@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import CardWidget from '../CartWidget/CardWidget';
 import './NavBar.css';
- import {Link} from 'react-router-dom'
-function NavBar() {
+function NavBar({productos}) {
+  
     return (
       <div>
 
@@ -16,13 +16,11 @@ function NavBar() {
       <div className="navbar-nav">
        <NavLink className="nav-link" to={'/'}>Nosotros</NavLink>
        <NavLink className="nav-link" to={'/'}>Recomendaciones</NavLink>
-       <NavLink className="nav-link" to={'/'}>Nuestros Productos</NavLink>
           <NavLink to={'/'} className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Nuestros Productos</NavLink>         
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-            <NavLink  className="dropdown-item" to={'category/:id'}>Categoria 1</NavLink>
-            <NavLink  className="dropdown-item" to={'category/:id'}>Categoria 2</NavLink>
-            <NavLink  className="dropdown-item" to={'category/:id'}>Categoria 3</NavLink>
+            <NavLink  className="dropdown-item" to={'/categoria/Grande'}>Grande</NavLink>
+            <NavLink  className="dropdown-item" to={'/categoria/Familiar'}>Familiar</NavLink>
             </li>
           </ul>
        <NavLink className="nav-link" to={'/Contacto'}>Contacto</NavLink>
@@ -37,4 +35,3 @@ function NavBar() {
   }
   
   export default NavBar;
-  
