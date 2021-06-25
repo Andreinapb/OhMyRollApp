@@ -24,6 +24,9 @@ useEffect(
               const i = result.filter (x => x.categoria == nombre ); setItems (i)
                console.log (items)
              } 
+             else {
+               setItems (result)
+             }
            }
            )
 }, [nombre] )
@@ -32,7 +35,7 @@ useEffect(
  */
     return (
 <div>
-<ItemList items = {productos}></ItemList>
+<ItemList items = {items}></ItemList>
 </div>
     )
 }
