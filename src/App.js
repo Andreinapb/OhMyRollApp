@@ -1,3 +1,4 @@
+import './App.css'
 import NavBar from "./Components/NavBar/NavBar";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
@@ -28,6 +29,7 @@ const productos = Info
 </Route>
 </Switch>
 </BrowserRouter>
+
 
     </div>
   );

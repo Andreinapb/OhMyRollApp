@@ -4,7 +4,7 @@ import './NavBar.css';
 function NavBar({productos}) {
   
     return (
-      <div>
+      <div className='ContainerNav'>
 
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">

@@ -14,13 +14,13 @@ useEffect(() => {
       resolve(productos);
     }, 2000);
   }).then((result) => {
-    const i = result.find ( x => x.id == id)
+    const i = result.find ( x => x.id === parseInt(id))
     setItem (i)
   });
-}, []);
+}, [Item]);
 
     return (
-        <div>
+        <div className='ContainerDetail'> 
            <ItemDetail className="DetailContainer" Detail ={Item}></ItemDetail> 
         </div>
     )

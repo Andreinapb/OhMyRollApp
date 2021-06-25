@@ -1,9 +1,9 @@
-.card-Item{
-    height: 200px;
-    width: 200px;
+.item {
+    height: 600px;
+    margin-top: 40px;   
 }
 
-.card-img-top {
-    height: 10%;
-    width: 10%
+.imgCard {
+    height: 100%;
+   width: 100%;
 }
