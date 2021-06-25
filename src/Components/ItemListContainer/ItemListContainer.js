@@ -1,11 +1,10 @@
 import  {useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from '../ItemList/ItemList'
-import {useParams} from 'react-router-dom'
-
 
 const ItemListContainer = ({productos}) => {
 
-  const {categoria} = useParams ()
+  const {nombre}= useParams()
 
     const [items, setItems] = useState([])
 
@@ -20,8 +19,14 @@ useEffect(
             productos) }, 
             2000); } )
         .then (
-           (result) =>  setItems (result))
-}, [] )
+           (result) =>  {
+             if (  nombre !== undefined) {
+              const i = result.filter (x => x.categoria == nombre ); setItems (i)
+               console.log (items)
+             } 
+           }
+           )
+}, [nombre] )
 
    /*  
  */

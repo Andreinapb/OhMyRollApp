@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import CardWidget from '../CartWidget/CardWidget';
 import './NavBar.css';
 function NavBar({productos}) {

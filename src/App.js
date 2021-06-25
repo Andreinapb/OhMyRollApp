@@ -5,8 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import Info from './Components/Info.json'
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
-import ItemCount from "./Components/ItemCount/ItemCount";
-
 
 
 function App() {
@@ -22,7 +20,7 @@ const productos = Info
 <Route exact path='/'> 
 <ItemListContainer productos= {productos}/>
 </Route>
-<Route path='/:categoria/:categoria'> 
+<Route path='/categoria/:nombre'> 
 <ItemListContainer productos= {productos}/>
 </Route>
 <Route path='/item/:id'>
@@ -30,8 +28,6 @@ const productos = Info
 </Route>
 </Switch>
 </BrowserRouter>
-
-<ItemDetailContainer productos = {productos}></ItemDetailContainer>
 
     </div>
   );

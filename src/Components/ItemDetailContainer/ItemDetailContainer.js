@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
-import {useParams} from 'react-router-dom'
 
 const ItemDetailContainer = ({productos}) => {
+
+   const {id} = useParams ()
 
 const [Item, setItem] = useState([])
 
@@ -12,7 +14,7 @@ useEffect(() => {
       resolve(productos);
     }, 2000);
   }).then((result) => {
-    const i = result.find ( x => x.id == 3 )
+    const i = result.find ( x => x.id == id)
     setItem (i)
   });
 }, []);
