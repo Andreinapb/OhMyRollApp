@@ -1,14 +1,8 @@
-.card {
-    height: fit-content;
-    margin-top: 200px;
-    height: 100%;
-    width: 400px;
-}
-.card-body {
-    height: fit-content;
-    width: fit-content;
+.DetailCard{
+   margin: 20px;
 }
 
-.DetailImg {
-    height: 200px;
-    width: 200px;}
+.bodyD {
+    padding: 20px;
+    justify-self: center;
+}

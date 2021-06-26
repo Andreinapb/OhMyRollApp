@@ -1,9 +1,10 @@
 import React from 'react'
+import './Greeting.css'
 
 const Greeting = ({saludo}) => {
     return (
-        <div>
-
+        <div className='saludo'>
+{saludo}
         </div>
     )
 }

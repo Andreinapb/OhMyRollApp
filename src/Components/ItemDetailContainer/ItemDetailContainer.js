@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
+import './ItemDetailContainer.css'
 
 const ItemDetailContainer = ({productos}) => {
 
@@ -21,7 +22,7 @@ useEffect(() => {
 
     return (
         <div className='ContainerDetail'> 
-           <ItemDetail className="DetailContainer" Detail ={Item}></ItemDetail> 
+           <ItemDetail Detail ={Item}></ItemDetail> 
         </div>
     )
 }

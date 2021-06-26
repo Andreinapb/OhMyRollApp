@@ -25,10 +25,9 @@ const ItemDetail = ({Detail}) => {
 }
 
     return (
-        <div>
-
-<Card className= 'body'style={{ width: '18rem' }}>
-  <Card.Img className='imgCard' variant="top" src={`${Detail.imagen}`} />
+        <div className='DetailCard'>
+<Card className= 'bodyD' style={{ width: '18rem' }}>
+  <Card.Img className='imgCardD' variant="top" src={`${Detail.imagen}`}/>
   <Card.Body>
     <Card.Title>{Detail.nombre}</Card.Title>
     <Card.Text>
