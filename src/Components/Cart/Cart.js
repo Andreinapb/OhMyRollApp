@@ -71,7 +71,8 @@ const Cart = () => {
                     <Card.Body>
                       <Card.Title>{el.producto.nombre}</Card.Title>
                       <Card.Text>{el.producto.descripcion}</Card.Text>
-                      <Card.Text>precio: {el.cantidad} </Card.Text>
+                      <Card.Text> Cantidad: {el.cantidad} </Card.Text>
+                      <Card.Text> Precio: ${el.producto.precio * el.cantidad}</Card.Text>
                     </Card.Body>
                   </Card>
                 </div>
