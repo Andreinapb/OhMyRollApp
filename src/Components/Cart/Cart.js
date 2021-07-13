@@ -41,9 +41,7 @@ const Cart = () => {
             >
               Vaciar
             </button>
-            <Link >
-              Finalizar
-            </Link>
+            <Link to="/checkout" className="finish-cart-link">Finalizar</Link>
           </div>
         </div>
       </div>

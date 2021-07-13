@@ -2,22 +2,21 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
+import {getFirestore} from '../../firebase/firebase'
 
-const ItemDetailContainer = ({ productos }) => {
+const ItemDetailContainer = () => {
   const { id } = useParams();
-
   const [Item, setItem] = useState([]);
 
   useEffect(() => {
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 2000);
-    }).then((result) => {
-      const i = result.find((x) => x.id === parseInt(id));
-      setItem(i);
+    const db = getFirestore();
+    const products = db.collection("items");
+    products.doc(id)
+    .get()
+    .then( (el) => {
+      setItem(el.data());
     });
-  }, [Item]);
+  }, [id]);
 
   return (
     <div className="ContainerDetail">

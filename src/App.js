@@ -8,6 +8,7 @@ import Info from './Components/Info.json'
 import CartProvider from './Context/CartProvider';
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Cart from './Components/Cart/Cart'
+import Checkout from './Components/Checkout.js/Checkout'
 
 
 function App() {
@@ -34,6 +35,9 @@ const productos = Info
 <Route path="/cart">
 <Cart />
 </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
 </Switch>
 </BrowserRouter>
 
