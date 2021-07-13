@@ -12,7 +12,7 @@ const Item = ({ item }) => {
         <Card.Body>
           <Card.Title>{item.nombre}</Card.Title>
           <Card.Text>
-            Obten tus delicisos rolls de {item.cantidad} por tal solo $
+            Obten tus delicisos rolls de {item.descripcion} por tan solo $
             {item.precio}
           </Card.Text>
           <Button variant="light">
