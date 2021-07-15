@@ -4,7 +4,7 @@ import CartContext from '../../Context/CartContext';
 import { useState } from 'react';
 import { getFirestore } from '../../firebase/firebase';
 import firebase from 'firebase/app';
-import "firebase/firestore";
+import "firebase/firestore"
 
 const Checkout = () => {
 
@@ -12,7 +12,7 @@ const Checkout = () => {
     const db = getFirestore();
     const [lastId, setLastId] = useState('');
     const [isLoad, setIsLoad] = useState(true);
-    const [priceOrder, setpriceOrder] = useState(0);
+    const [priceOrder, setPriceOrder] = useState(0);
     const [emptyInput, setEmptyInput] = useState(false);
     const [wrongEmail, setWrongEmail] = useState(false);
 
@@ -41,11 +41,11 @@ const Checkout = () => {
         const newOrder = {
             user: {
                 name: document.getElementById('user-name').value,
-                phone: parseInt(document.getElementById('user-number').value),
+                number: parseInt(document.getElementById('user-number').value),
                 email: document.getElementById('user-email').value},
-            products: listProductsCart(),
+            producto: Carrito,
             total: PrecioTotal(),
-            dateCreate: firebase.firestore.Timestamp.fromDate(new Date())
+            dateCreate: firebase.firestore.Timestamp.fromDate(new Date()),
         }
         const orders = db.collection('orders');
         orders.add(newOrder).then( (resp) => {
@@ -57,19 +57,20 @@ const Checkout = () => {
         Clear();
     }
 
-    const listProductsCart = () => {
-        let products = [];
+ /*    const listProductsCart = () => {
+        let producto = [];
         for (let i = 0; i<Carrito.length; i++) {
             const product = {
                 id: Carrito[i].producto.id,
                 title: Carrito[i].producto.nombre,
                 quantity: Carrito[i].cantidad,
-                precio: Carrito[i].producto.precio * Carrito[i].cantidad
+                price: Carrito[i].producto.precio * Carrito[i].cantidad
             }
-            products.push(product);
+            producto.push(product);
+            console.log (product)
         }
-        return products;
-    }
+        return producto;
+    } */
 
     const CheckoutOrder = () => {
         return(
@@ -116,14 +117,14 @@ const Checkout = () => {
     const OrderFinalMessage = () => {
         const orderUser = db.collection('orders').doc(lastId);
         orderUser.get().then( resp => {
-            setpriceOrder(resp.data().total);
+            setPriceOrder(resp.data().total);
         });
 
         return(
             <div className="container-order-message">
                 <p className="thanks-message">Gracias por su compra!</p>
                 <p className="text-order-message">Numero de orden: {lastId}</p>
-                <p className="precio-order-message">Precio: ${priceOrder}</p>
+                <p className="price-order-message">Precio: ${priceOrder}</p>
                 <Link to="/" className="link-order-message">Cerrar</Link>
             </div>
         );
