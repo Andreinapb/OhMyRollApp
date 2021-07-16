@@ -13,12 +13,12 @@ const ItemDetail = ({ Detail }) => {
   const [Cantidad, setCantidad] = useState(false);
   const [CantidadFinal, setCantidadFinal] = useState(false);
 
-  const OnAdd = (cantidad) => {
-    if (cantidad <= stock) {
-      setCantidad(stock - cantidad);
+  const OnAdd = (Cantidad) => {
+    if (Cantidad <= stock) {
+      setCantidad(stock - Cantidad);
       setCantidadFinal(true);
     }
-    AddItem (Detail, cantidad);
+    AddItem (Detail, Cantidad);
   };
 
   const MostrarCompra = () => {

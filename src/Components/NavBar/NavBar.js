@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import CardWidget from "../CartWidget/CardWidget";
 import "./NavBar.css";
-function NavBar({ productos }) {
+function NavBar() {
   return (
     <div className="ContainerNav">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">

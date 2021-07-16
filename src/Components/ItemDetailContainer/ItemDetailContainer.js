@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     products.doc(id)
     .get()
     .then( (el) => {
-      setItem(el.data());
+      setItem({id: el.id, ...el.data()});
     });
   }, [id]);
 

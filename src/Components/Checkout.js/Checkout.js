@@ -4,7 +4,7 @@ import CartContext from '../../Context/CartContext';
 import { useState } from 'react';
 import { getFirestore } from '../../firebase/firebase';
 import firebase from 'firebase/app';
-import "firebase/firestore"
+import "firebase/firestore";
 
 const Checkout = () => {
 
@@ -43,9 +43,9 @@ const Checkout = () => {
                 name: document.getElementById('user-name').value,
                 number: parseInt(document.getElementById('user-number').value),
                 email: document.getElementById('user-email').value},
-            producto: Carrito,
+            products: listProductsCart(),
             total: PrecioTotal(),
-            dateCreate: firebase.firestore.Timestamp.fromDate(new Date()),
+            dateCreate: firebase.firestore.Timestamp.fromDate(new Date())
         }
         const orders = db.collection('orders');
         orders.add(newOrder).then( (resp) => {
@@ -57,20 +57,19 @@ const Checkout = () => {
         Clear();
     }
 
- /*    const listProductsCart = () => {
-        let producto = [];
+    const listProductsCart = () => {
+        let products = [];
         for (let i = 0; i<Carrito.length; i++) {
             const product = {
                 id: Carrito[i].producto.id,
-                title: Carrito[i].producto.nombre,
-                quantity: Carrito[i].cantidad,
-                price: Carrito[i].producto.precio * Carrito[i].cantidad
+                nombre: Carrito[i].producto.nombre,
+                cantidad: Carrito[i].cantidad,
+                precio: Carrito[i].producto.precio * Carrito[i].cantidad
             }
-            producto.push(product);
-            console.log (product)
+            products.push(product);
         }
-        return producto;
-    } */
+        return products;
+    }
 
     const CheckoutOrder = () => {
         return(

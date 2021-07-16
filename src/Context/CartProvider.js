@@ -10,14 +10,14 @@ const CartProvider = ({ children }) => {
         const productoIndex = IsInCart(producto.id);
 
         if (productoIndex >= 0) {
-            const NuevaCantidad = Carrito[productoIndex].cantidad + cantidad;
-            const NuevoItem = Carrito.map(function(el){
+            const nuevaCantidad = Carrito[productoIndex].cantidad + cantidad;
+            const nuevoItem = Carrito.map(function(el){
                 if (el.producto.id === producto.id) {
-                    el = {producto, cantidad: NuevaCantidad}
+                    el = {producto,  cantidad: nuevaCantidad}
                 }
                 return el;
             });
-            setCarrito(NuevoItem);
+            setCarrito(nuevoItem);
         } else {
             setCarrito([
                 ...Carrito,
@@ -41,8 +41,8 @@ const CartProvider = ({ children }) => {
     }
 
     const RemoveItem = (id) => {
-        let newCarrito = Carrito.filter(({producto}) => producto.id !== id )
-        setCarrito(newCarrito);
+        let nuevoCart = Carrito.filter(({producto}) => producto.id !== id )
+        setCarrito(nuevoCart);
     };
 
     const Clear = () => {
