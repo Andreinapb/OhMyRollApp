@@ -1,0 +1,46 @@
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+
+body {
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	font-size: 22px;
+}
+
+.contenido-header {
+	width: 100%;
+	height: 100vh;
+	background-image: url(../assets/img7.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.contenido-header .fondo {
+	width: 0%;
+	height: 100%;
+	max-width: 100%;
+	background-image: url(../assets/cayendo.png);
+}
+
+.contenido-header .texto {
+	width: calc(100vw - 20px);
+	height: 100vh;
+	font-size: 90px;
+	font-weight: 400;
+	font-family: 'Noto Serif', serif;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color1;
+	mix-blend-mode: multiply;
+}

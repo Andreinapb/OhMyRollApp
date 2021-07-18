@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import './ItemCount.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'; 
 import {faMinusCircle} from '@fortawesome/free-solid-svg-icons'

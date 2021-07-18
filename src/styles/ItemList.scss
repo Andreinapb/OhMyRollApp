@@ -1,0 +1,14 @@
+/* Paleta de colores*/
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+
+.productos #listado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

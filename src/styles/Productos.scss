@@ -1,0 +1,95 @@
+/* Paleta de colores*/
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+
+
+
+#productos .productos {
+background: $color7;
+   display: flex;
+   display: inline-block;
+}
+
+.productos .titulo {
+	width: 70%;
+	font-size: 35px;
+	text-transform: uppercase;
+	display: inline-flex;
+	margin-bottom: 50px;
+}
+
+.productos .producto {
+    display: inline-flex;
+	position: relative;
+}
+
+.productos .overlay {
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: $color3;
+	overflow: hidden;
+	transition: .5s ease;
+}
+
+.productos .producto:hover .overlay {
+	width: 100%;
+	opacity: .8;
+}
+
+.productos .producto .overlay-titulo {
+	top: 60%;
+	left: 50%;
+	position: absolute;
+	white-space: nowrap;
+	color: $color7;
+	font-size: 20px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border-top: 1px soli $color6;
+	border-bottom: 1px solid $color6;
+}
+
+.productos .producto .overlay-texto {
+	top: 30%;
+	left: 50%;
+	position: absolute;
+	white-space: wrap;
+    text-align: center;
+	color: $color6;
+	font-size: 15px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.productos .btn-productos {
+	background-color: $color1;
+	padding: 7px 20px;
+	border: 2px solid transparent;
+	transition: .3s ease;
+}
+
+.productos .btn-productos a {
+	text-decoration: none;
+	color: $color6;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.productos .btn-productos:hover {
+	background-color: transparent;
+	border: 2px solid $color1;
+
+	a {
+		color: $color1;
+	}
+
+}

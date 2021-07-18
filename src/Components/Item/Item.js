@@ -1,14 +1,33 @@
 import React from "react";
-import "./Item.css";
 import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import "../../styles/Item.scss";
 
 const Item = ({ item }) => {
   return (
-    <div className="item">
+    <article className="col-4 col-lg-3 py-1 justify-content-center">
+      <figure className="producto">
+        <img className="img-fluid" src={`${item.imagen}`} alt=""></img>
+        <figcaption class="overlay">
+          <p className="overlay-titulo">{item.nombre}</p>
+          <p className="overlay-texto">
+            {" "}
+            <br /> {item.descripcion} por tan solo $ {item.precio}{" "}
+          </p>
+        </figcaption>
+      </figure>
+      <Link to={`/item/${item.id}`}>
+        <button className="btn-productos btn"> Ver Detalle</button>
+      </Link>
+    </article>
+  );
+};
+
+export default Item;
+
+/* 
+<div className="item">
       <Card className="body" style={{ width: "18rem" }}>
-        <Card.Img className="imgCard" variant="top" src={`${item.imagen}`} />
+        <Card.Img  />
         <Card.Body>
           <Card.Title>{item.nombre}</Card.Title>
           <Card.Text>
@@ -20,8 +39,13 @@ const Item = ({ item }) => {
           </Button>
         </Card.Body>
       </Card>
-    </div>
-  );
-};
 
-export default Item;
+
+
+
+
+
+
+
+    </div>
+ */
