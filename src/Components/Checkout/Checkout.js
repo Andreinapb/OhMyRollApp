@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { getFirestore } from '../../firebase/firebase';
 import firebase from 'firebase/app';
 import "firebase/firestore";
+import '../../styles/Checkout.scss'
+
 
 const Checkout = () => {
 
@@ -76,22 +78,27 @@ const Checkout = () => {
             <div className="container-checkout">
                 <h1 className="title-checkout">CONFIRMACIÓN</h1>
                 <p className="text-checkout">Por favor complete los siguientes datos para finalizar su compra.</p>
+                <br/>
                 <form id="form-checkout" className="form-checkout">
                     <div className="div-input">
                         <label className="label-input">Nombre y Apellido: </label>
-                        <input id="user-name" className="form-input" type="text" required autocomplete="off"></input>
+                        <br/>
+                        <input id="user-name" className="form-input" type="text" required autoComplete="off"></input>
                     </div>
                     <div className="div-input">
                         <label className="label-input">Teléfono: </label>
-                        <input id="user-number" className="form-input" type="tel" required autocomplete="off"></input>
+                        <br/>
+                        <input id="user-number" className="form-input" type="tel" required autoComplete="off"></input>
                     </div>
                     <div className="div-input">
                         <label className="label-input">Correo:</label>
-                        <input id="user-email" className="form-input" type="email" required autocomplete="off"></input>
+                        <br/>
+                        <input id="user-email" className="form-input" type="email" required autoComplete="off"></input>
                     </div>
                     <div className="div-input">
                         <label className="label-input">Reingrese su correo:</label>
-                        <input id="user-check-email" className="form-input" type="email" required autocomplete="off"></input>
+                        <br/>
+                        <input id="user-check-email" className="form-input" type="email" required autoComplete="off"></input>
                     </div>
                     {
                         emptyInput ?
@@ -100,6 +107,7 @@ const Checkout = () => {
                         <span className="warning-text">El correo no coincide.</span>
                     }
                     <button onClick={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
+                    
                 </form>
             </div>
         );

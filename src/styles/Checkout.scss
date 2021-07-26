@@ -1,0 +1,85 @@
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+
+
+.container-checkout{
+    
+.title-checkout{
+    color: $color1;
+    text-align: center;
+}
+
+.text-checkout{
+    color: $color1;
+    text-align: center;
+}
+
+.form-checkout{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .div-input{
+        color: $color1;
+
+        .label-input{
+            color: $color1;
+            margin: 8px;
+            text-align: start;
+        }
+
+        .form-input{
+            text-align: center;
+            color: $color1;
+            margin: 8px;
+            width: 500px;
+            border-radius: 8px;
+            border: solid 2px $color1;
+        }
+    }
+
+    .warning-text{
+        color: $color1;
+    }
+
+.button-form{
+    color: $color7;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border-color: $color1;
+    background-color: $color1;
+    text-transform: uppercase;
+}
+}
+}
+
+.waiting-div{
+    color: $color1;
+}
+
+.container-order-message{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    color: $color4;
+    height: 400px;
+
+    .link-order-message{
+        color: $color7;
+        text-decoration: none;
+        margin: 20px;
+        text-transform: uppercase;
+    }
+}

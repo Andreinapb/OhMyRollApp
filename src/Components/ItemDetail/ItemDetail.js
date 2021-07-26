@@ -3,6 +3,7 @@ import ItemCount from "./ItemCount";
 import CartContext from "../../Context/CartContext";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import '../../styles/ItemDetail.scss'
 
 const ItemDetail = ({ Detail }) => {
   const { AddItem } = useContext(CartContext);
@@ -39,9 +40,9 @@ const ItemDetail = ({ Detail }) => {
       <Card className="bodyD" style={{ width: "18rem" }}>
         <Card.Img className="imgCardD" variant="top" src={`${Detail.imagen}`} />
         <Card.Body>
-          <Card.Title>{Detail.nombre}</Card.Title>
+          <Card.Title className="title">{Detail.nombre}</Card.Title>
           <Card.Text>{Detail.descripcion}</Card.Text>
-          <button> {MostrarCompra()}</button>
+          <button className='boton-caja'> {MostrarCompra()}</button>
         </Card.Body>
       </Card>
     </div>

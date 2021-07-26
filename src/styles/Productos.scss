@@ -77,19 +77,6 @@ background: $color7;
 	transition: .3s ease;
 }
 
-.productos .btn-productos a {
-	text-decoration: none;
-	color: $color6;
-	text-transform: uppercase;
-	font-size: 16px;
-}
 
-.productos .btn-productos:hover {
-	background-color: transparent;
-	border: 2px solid $color1;
 
-	a {
-		color: $color1;
-	}
 
-}

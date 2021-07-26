@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import {getFirestore} from '../../firebase/firebase'
+import '../../styles/ItemDetailContainer.scss'
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -18,9 +19,16 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <div className="ContainerDetail">
+    <div>
+       <article class="row text-center">
+            <h2 class="subtitulo col-6 col-lg-12"><span>Tu carrito OH MY ROLL</span></h2>
+            <p class="titulo">disfruta de los rolls mas cremosos y deliciosos</p>
+        </article>
+      <div className="ContainerDetail">
       <ItemDetail Detail={Item}></ItemDetail>
     </div>
+    </div>
+    
   );
 };
 

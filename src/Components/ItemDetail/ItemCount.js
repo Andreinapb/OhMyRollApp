@@ -1,30 +1,42 @@
-import React, {useState} from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'; 
-import {faMinusCircle} from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import "../../styles/ItemCount.scss";
 
-const ItemCount = ({Initial, Stock,OnAdd}) => {
-    const [Contador, setContador] = useState (Initial)
+const ItemCount = ({ Initial, Stock, OnAdd }) => {
+  const [Contador, setContador] = useState(Initial);
 
-const Restar = () => {Contador >= 1 ? setContador (Contador - 1) : alert ("Por favor Agrega un producto")}
-const Sumar = () => {Contador < Stock ? setContador (Contador + 1) : alert ("Se nos ha acabado el stock, por favor vuelve mañana")}
-    
-    return (
-        <div>
+  const Restar = () => {
+    Contador >= 1
+      ? setContador(Contador - 1)
+      : alert("Por favor Agrega un producto");
+  };
+  const Sumar = () => {
+    Contador < Stock
+      ? setContador(Contador + 1)
+      : alert("Se nos ha acabado el stock, por favor vuelve mañana");
+  };
 
-<div className='caja-contador'> 
-<div>
-<FontAwesomeIcon icon={faMinusCircle} className='icon' onClick = { () => Restar()}></FontAwesomeIcon>
-<span className='contador'>{Contador}</span>
-<FontAwesomeIcon icon={faPlusCircle} className='icon' onClick = { () => Sumar()}></FontAwesomeIcon>
-</div>
+  return (
+    <div className="caja-contador">
+      <FontAwesomeIcon
+        icon={faMinusCircle}
+        className="icon"
+        onClick={() => Restar()}
+      ></FontAwesomeIcon>{" "}
+      <button onClick={() => OnAdd(Contador)} className="boton" type="button">
+        {Contador >= 1 ? "Realizar Compra" : "Agregar Productos"}
+      </button>
+      <FontAwesomeIcon
+        icon={faPlusCircle}
+        className="icon"
+        onClick={() => Sumar()}
+      ></FontAwesomeIcon>
+      <br/>
+      <span className="contador">{Contador}</span>
+    </div>
+  );
+};
 
-<button onClick = { () => OnAdd (Contador) } className='boton' type='button'> { Contador >= 1 ? ('Realizar Compra') : ('Agregar Productos') }</button>
-</div>
-       
-        </div>
-    )
-}
-
-export default ItemCount
- 
+export default ItemCount;

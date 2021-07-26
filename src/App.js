@@ -10,6 +10,8 @@ import Checkout from './Components/Checkout/Checkout'
 import Nosotros from './Components/Home/Nosotros'
 import Banner from './Components/Header/Banner'
 import Cita from './Components/Home/Cita'
+import Footer from './Components/Footer/Footer';
+import Recomendaciones from './Components/Home/Recomendaciones';
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
 <Nosotros/>
 <ItemListContainer />
 <Cita></Cita>
+<Recomendaciones></Recomendaciones>
 </Route>
 <Route path='/categoria/:nombre'> 
 <ItemListContainer />
@@ -46,6 +49,7 @@ function App() {
             <Checkout />
           </Route>
 </Switch>
+<Footer></Footer>
 </BrowserRouter>
 
 

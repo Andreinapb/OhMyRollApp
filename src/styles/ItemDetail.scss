@@ -1,0 +1,47 @@
+/* Paleta de colores*/
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+$color8: #808080;
+
+.DetailCard 
+{display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    .bodyD
+    {
+        background-color: $color7;
+        color: $color1;
+        text-align: center;
+        font-family: serif;
+        border-radius: 5px;
+        .title
+        {
+            color: $color7;
+            text-transform: uppercase;
+        }
+
+        .Compra 
+        {
+        border-radius: 8px;
+        color: $color1;
+        border : 9px $color1;
+        background-color: $color6;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 10px;
+        }
+        .boton-caja {
+            border : 0px;
+            border-radius: 8px;
+            padding: 4px;
+            background-color: $color7;
+        }
+    }
+}

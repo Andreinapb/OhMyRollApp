@@ -24,28 +24,4 @@ const Item = ({ item }) => {
 
 export default Item;
 
-/* 
-<div className="item">
-      <Card className="body" style={{ width: "18rem" }}>
-        <Card.Img  />
-        <Card.Body>
-          <Card.Title>{item.nombre}</Card.Title>
-          <Card.Text>
-            Obten tus delicisos rolls de {item.descripcion} por tan solo $
-            {item.precio}
-          </Card.Text>
-          <Button variant="light">
-            <Link to={`/item/${item.id}`}>Ver Detalle</Link>
-          </Button>
-        </Card.Body>
-      </Card>
 
-
-
-
-
-
-
-
-    </div>
- */

@@ -1,0 +1,33 @@
+/* Paleta de colores*/
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+$color8: #808080;
+
+.caja-contador {
+    border:0;
+
+    .boton {
+        color: $color1;
+        border-radius: 8px;
+        background-color: $color6;
+        border : 9px $color1;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+
+    .icon {
+        color: $color1;
+    }
+
+    .contador {
+        color: $color1;
+    }
+}
