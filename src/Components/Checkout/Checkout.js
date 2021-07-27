@@ -88,7 +88,7 @@ const Checkout = () => {
                     <div className="div-input">
                         <label className="label-input">Teléfono: </label>
                         <br/>
-                        <input id="user-number" className="form-input" type="tel" required autoComplete="off"></input>
+                        <input id="user-number" className="form-input" type="number" required autoComplete="off"></input>
                     </div>
                     <div className="div-input">
                         <label className="label-input">Correo:</label>
@@ -106,7 +106,7 @@ const Checkout = () => {
                         : wrongEmail &&
                         <span className="warning-text">El correo no coincide.</span>
                     }
-                    <button onSubmit={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
+                    <button onClick={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
                     
                 </form>
             </div>

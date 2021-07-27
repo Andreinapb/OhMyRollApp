@@ -1,0 +1,79 @@
+/* Paleta de colores*/
+$color1:#A84144;
+$color2:#FFA07A;
+$color3:#F08080;
+$color4:#CD5C5C;
+$color5:#17202A;
+$color6:#FBFCFC;
+$color7:#D7DBDD;
+
+.empty-cart{
+    background-color: $color6;
+    
+    .container-empty-cart{
+        color: $color1;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 30px;
+    }
+    .link-back{
+        text-decoration: none;
+        color: $color5;
+        font-size: 30px;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        margin: 30px;
+
+        .left-icon {
+            color: $color1;
+            margin-right: 10px;
+        };
+    }
+}
+
+.cart-view
+{
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .DetailCard
+    {
+       
+        .bodyD
+        {
+           
+            .imgCardD
+            {
+            height: 300px;
+            }
+        }
+    }
+}
+
+.cart-options{
+margin-left: 100px;
+
+  
+    .precioTotal{
+        text-align: center;
+        color: $color1;
+        text-transform: uppercase;
+    }
+
+    .button-clear-cart{
+    background-color: $color1;
+    margin: 10px;
+    padding:5px;
+    color: $color7;
+    border-radius: 8px;
+    border:0px;
+    width: 100px;
+    }
+
+    .finish-cart-link{
+        text-decoration: none;
+        color: $color1;
+        margin: 10px;
+    }
+}
