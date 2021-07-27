@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <div>
-      {context.Carrito.length === 0 ? (
+      {context.Carrito.length == 0 ? (
         <div>
           <div className="container-empty-cart">
             No hay Productos en el carrito, por favor agregue alguno
@@ -41,7 +41,7 @@ const Cart = () => {
             >
               Vaciar
             </button>
-            <Link to="/checkout" className="finish-cart-link">Finalizar</Link>
+            <Link to="/Checkout" className="finish-cart-link">Finalizar</Link>
           </div>
         </div>
       </div>

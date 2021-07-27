@@ -106,7 +106,7 @@ const Checkout = () => {
                         : wrongEmail &&
                         <span className="warning-text">El correo no coincide.</span>
                     }
-                    <button onClick={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
+                    <button onSubmit={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
                     
                 </form>
             </div>

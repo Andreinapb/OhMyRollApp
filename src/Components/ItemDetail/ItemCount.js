@@ -4,7 +4,8 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/ItemCount.scss";
 
-const ItemCount = ({ Initial, Stock, OnAdd }) => {
+
+const ItemCount = ({ Initial, Stock, OnAdd, }) => {
   const [Contador, setContador] = useState(Initial);
 
   const Restar = () => {
@@ -26,8 +27,11 @@ const ItemCount = ({ Initial, Stock, OnAdd }) => {
         onClick={() => Restar()}
       ></FontAwesomeIcon>{" "}
       <button onClick={() => OnAdd(Contador)} className="boton" type="button">
-        {Contador >= 1 ? "Realizar Compra" : "Agregar Productos"}
+        {
+           Contador > 0 ? "Ver Carrito" : "Agregue un producto"
+        }
       </button>
+      
       <FontAwesomeIcon
         icon={faPlusCircle}
         className="icon"
