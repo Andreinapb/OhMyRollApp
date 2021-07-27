@@ -16,7 +16,7 @@ function CartWidget() {
 
   return (
     <div className="cart-container">
-      {Carrito.length !== 0 && <span className="span-cart">{totalItems}</span>}
+      {Carrito.length >= 1 && <span className="span-cart">{totalItems}</span>}
 
       <Link to={`/Cart`} >
         <FontAwesomeIcon icon={faShoppingCart} className="icon"  />

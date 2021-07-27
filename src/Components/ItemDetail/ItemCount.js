@@ -3,15 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/ItemCount.scss";
+import { Link } from "react-router-dom";
 
-
-const ItemCount = ({ Initial, Stock, OnAdd, }) => {
+const ItemCount = ({ Initial, Stock, OnAdd }) => {
   const [Contador, setContador] = useState(Initial);
 
   const Restar = () => {
-    Contador >= 1
+    Contador >= 2
       ? setContador(Contador - 1)
-      : alert("Por favor Agrega un producto");
+      : 
+        setContador(Initial);
   };
   const Sumar = () => {
     Contador < Stock
@@ -25,19 +26,26 @@ const ItemCount = ({ Initial, Stock, OnAdd, }) => {
         icon={faMinusCircle}
         className="icon"
         onClick={() => Restar()}
-      ></FontAwesomeIcon>{" "}
-      <button onClick={() => OnAdd(Contador)} className="boton" type="button">
-        {
-           Contador > 0 ? "Ver Carrito" : "Agregue un producto"
-        }
-      </button>
-      
+      ></FontAwesomeIcon>
+      {Contador >= 2 ? (
+        
+        <button onClick={() => OnAdd(Contador)} className="boton" type="button">
+            <Link to="/Cart" className="Compra">
+          Ver Carrito
+          </Link>
+        </button>
+      ) : (
+        <button onClick={() => OnAdd(Contador)} className="boton" type="button">
+         Agregue un producto
+        </button>
+      )}
+
       <FontAwesomeIcon
         icon={faPlusCircle}
         className="icon"
         onClick={() => Sumar()}
       ></FontAwesomeIcon>
-      <br/>
+      <br />
       <span className="contador">{Contador}</span>
     </div>
   );

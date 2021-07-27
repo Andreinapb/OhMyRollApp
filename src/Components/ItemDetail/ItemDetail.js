@@ -7,7 +7,7 @@ import '../../styles/ItemDetail.scss'
 
 const ItemDetail = ({ Detail }) => {
   const { AddItem } = useContext(CartContext);
-  const Initial = 0;
+  const Initial = 1;
   const stock = 5;
 
   const [Cantidad, setCantidad] = useState(false);
@@ -26,7 +26,7 @@ const ItemDetail = ({ Detail }) => {
       return (
         <>
           <Link to="/Cart" className="Compra">
-            Agregar al carrito{" "}
+            Ver Carrito{" "}
           </Link>
         </>
       );

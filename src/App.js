@@ -5,7 +5,7 @@ import ItemListContainer from "./Components/Item/ItemListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartProvider from "./Context/CartProvider";
 import ItemDetailContainer from "./Components/ItemDetail/ItemDetailContainer";
-import Cart from "./Components/Cart/Cart";
+import Cart from './Components/Cart/Cart'
 import Checkout from "./Components/Checkout/Checkout";
 import Nosotros from "./Components/Home/Nosotros";
 import Banner from "./Components/Header/Banner";

@@ -9,7 +9,7 @@ const CartProvider = ({ children }) => {
 
         const productoIndex = IsInCart(producto.id);
 
-        if (productoIndex >= 0) {
+        if (productoIndex >= 1) {
             const nuevaCantidad = Carrito[productoIndex].cantidad + cantidad;
             const nuevoItem = Carrito.map(function(el){
                 if (el.producto.id === producto.id) {
