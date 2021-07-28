@@ -79,7 +79,7 @@ const Checkout = () => {
                 <h1 className="title-checkout">CONFIRMACIÓN</h1>
                 <p className="text-checkout">Por favor complete los siguientes datos para finalizar su compra.</p>
                 <br/>
-                <form id="form-checkout" className="form-checkout">
+                <form id="form-checkout" className="form-checkout" onSubmit={(e) => checkedData(e)}  >
                     <div className="div-input">
                         <label className="label-input">Nombre y Apellido: </label>
                         <br/>
@@ -106,7 +106,7 @@ const Checkout = () => {
                         : wrongEmail &&
                         <span className="warning-text">El correo no coincide.</span>
                     }
-                    <button onClick={(e) => checkedData(e)}className="button-form" type="submit">Confirmar</button>
+                    <button className="button-form" type="submit">Confirmar</button>
                     
                 </form>
             </div>
