@@ -48,7 +48,7 @@ function NavBar() {
                   Recomendaciones
                 </NavLink>
               </Nav.Link>
-              <Nav.Link >  <NavLink className="nav-link" to={"/Contacto"}>
+              <Nav.Link >  <NavLink className="nav-link" to={"/"}>
                  Contactanos
                 </NavLink></Nav.Link>
             </Nav>

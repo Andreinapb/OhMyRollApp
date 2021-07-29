@@ -29,8 +29,10 @@ function App() {
               <Nosotros/>
               </Route>
               <Route exact path ='/'>
+              <Nosotros/>
               <ItemListContainer/>
               <Cita/>
+              <Recomendaciones/>
               </Route>
               <Route path='/Recomendaciones'>
               <Recomendaciones/>
@@ -39,16 +41,13 @@ function App() {
               <ItemListContainer />
             </Route>
             <Route path="/item/:id">
-              <ItemDetailContainer></ItemDetailContainer>
+              <ItemDetailContainer/>
             </Route>
             <Route exact path="/Cart">
               <Cart></Cart>
             </Route>
               <Route  path="/Checkout">
               <Checkout/>
-            </Route>
-            <Route path='Contacto'>
-              <Footer/>
             </Route>
           </Switch>
           <Footer></Footer>
