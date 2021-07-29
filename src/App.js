@@ -25,12 +25,16 @@ function App() {
           </Switch>
           <NavBar />
           <Switch>
-            <Route exact path="/">
-              <Nosotros />
-              <ItemListContainer />
-              <Cita></Cita>
-              <Recomendaciones></Recomendaciones>
-            </Route>
+            <Route exact path="/Nosotros">
+              <Nosotros/>
+              </Route>
+              <Route exact path ='/'>
+              <ItemListContainer/>
+              <Cita/>
+              </Route>
+              <Route path='/Recomendaciones'>
+              <Recomendaciones/>
+              </Route>
             <Route path="/categoria/:nombre">
               <ItemListContainer />
             </Route>
@@ -42,6 +46,9 @@ function App() {
             </Route>
               <Route  path="/Checkout">
               <Checkout/>
+            </Route>
+            <Route path='Contacto'>
+              <Footer/>
             </Route>
           </Switch>
           <Footer></Footer>

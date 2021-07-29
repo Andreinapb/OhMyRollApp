@@ -22,7 +22,7 @@ function NavBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#Nosotros">
-                <NavLink className="nav-link" to={"/"}>
+                <NavLink className="nav-link" to={"/Nosotros"}>
                   Nosotros
                 </NavLink>
               </Nav.Link>
@@ -30,7 +30,7 @@ function NavBar() {
               <NavDropdown
                 title="Nuestros Productos"
                 id="collasible-nav-dropdown"
-              > 
+              >
                 <NavDropdown.Item>
                   <NavLink className="dropdown-item" to={"/categoria/Grande"}>
                     Bandejas Grande
@@ -44,11 +44,11 @@ function NavBar() {
               </NavDropdown>
               </NavLink>
               <Nav.Link href="#pricing">
-                <NavLink className="nav-link" to={"/"}>
+                <NavLink className="nav-link" to={"/Recomendaciones"}>
                   Recomendaciones
                 </NavLink>
               </Nav.Link>
-              <Nav.Link >  <NavLink className="nav-link" to={"/"}>
+              <Nav.Link >  <NavLink className="nav-link" to={"/Contacto"}>
                  Contactanos
                 </NavLink></Nav.Link>
             </Nav>
