@@ -19,12 +19,15 @@ Descargar carpeta del proyecto
 Desde el directorio donde se encuentra el proyecto, ejecutar los siguientes comandos en la consola de comandos:
 
 npm install
+
 Instala las dependencias necesarias para ejecutar la aplicación.
 
 npm start
+
 Ejecuta la aplicación en modo de desarrollo. Podrá visualizarlo en el navegador abriendo http://localhost:3000. La página se recargará si realiza modificaciones. También verá cualquier error en la consola.
 
 Sobre React
+
 Si desea conocer más sobre React puede ingresar en: Create React App documentation.
 
 Para aprender a utilizar React: React documentation.
